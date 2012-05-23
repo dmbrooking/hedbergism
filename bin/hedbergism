@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/hedbergism/quote_file'
+
+file_name = File.join(File.dirname(__FILE__), 'quotes.csv')
+quotes = Hedbergism::QuoteFile.new(file_name)
+
+puts quotes.random
