@@ -1,0 +1,6 @@
+This is just a REALLY simple RubyGem that will return a random Mitch Hedberg quote.  I decided to do this after taking a course on Ruby - I thought I could force it into being a little more complicated to test some of what I learned.... but this is about as simple as it gets.
+
+Usage:
+
+> hedbergism
+Is a hippopotamus a hippopotamus or just a really cool opotamus?
