@@ -1,9 +1,9 @@
 Gem::Specification.new do |s| 
   s.name         = "hedbergism"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.author       = "Dan Brooking"
   s.email        = "dmbrooking@gmail.com"
-  s.homepage     = "http://www.danbrooking.com"
+  s.homepage     = "https://github.com/dmbrooking/"
   s.summary      = "Returns random Mitch Hedberg quotes"
   s.description  = File.read(File.join(File.dirname(__FILE__), 'README'))
 
