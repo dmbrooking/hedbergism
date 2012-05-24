@@ -1,6 +1,20 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/hedbergism/quote_file'
+require_relative '../lib/trollop'
+
+opts = Trollop::options do
+  version "Hedbergism 1.0.3 (c) 2012 Dan Brooking"
+  banner <<-EOS
+Hedbergism is a program that will output a random Mitch Hedberg quote.
+Usage:
+  hedbergism [options]
+where [options] are:
+EOS
+
+  opt :file, "Alternate file to get quotes from. File must be \"~~\" delimited", :type => String
+end
+Trollop::die :file, "must exist" unless File.exist?(opts[:file]) if opts[:file]
 
 file_name = File.join(File.dirname(__FILE__), 'quotes.csv')
 quotes = Hedbergism::QuoteFile.new(file_name)
