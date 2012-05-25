@@ -95,11 +95,11 @@ END
       @quote.quote.should == "I bought a doughnut and they gave me a receipt for the doughnut. I don't need a receipt for the doughnut. I'll just give you the money, and you give me the doughnut, end of transaction. We don't need to bring ink and paper into this. I just can't imagine a scenario where I would have to prove that I bought a doughnut. Some skeptical friend: \"Don't even act like I didn't get that doughnut! I got the documentation right here...oh, wait it's at home...in the file...under \"D\", for \"doughnut.\""
     end
     
-    it "does not have a location" do
+    it "does has a location" do
       @quote.location.should == "The Laff Stop comedy club - Houston, Texas"
     end
     
-    it "does not have a date" do
+    it "does has a date" do
       @quote.date.should == "September 7, 1999"
     end
 
