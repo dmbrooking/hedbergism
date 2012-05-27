@@ -3,6 +3,8 @@ require_relative 'quote'
 module Hedbergism
   class QuoteFile
     
+    attr_reader :lines
+    
     def initialize(file_name)
       @lines = []
       File.readlines(file_name).each do |line|
