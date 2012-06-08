@@ -19,4 +19,4 @@ Trollop::die :file, "must exist" unless File.exist?(opts[:file]) if opts[:file]
 file_name = opts[:file] || File.join(File.dirname(__FILE__), 'quotes.csv')
 quotes = Hedbergism::QuoteFile.new(file_name)
 
-puts quotes.random
+puts quotes.random.banner

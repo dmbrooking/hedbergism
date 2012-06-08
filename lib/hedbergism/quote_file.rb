@@ -21,7 +21,7 @@ module Hedbergism
     end
     
     def random
-      @lines.sample.to_s
+      @lines.sample
     end
     
   end

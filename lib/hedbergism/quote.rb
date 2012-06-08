@@ -10,6 +10,10 @@ module Hedbergism
     end
     
     def to_s
+      @quote.chomp
+    end
+    
+    def banner
       chunks
       output = "\#" * (@length_of_chunk + 5) + "\n"
       output += blank_line
@@ -20,8 +24,8 @@ module Hedbergism
         output += "#{newline}\n"
       end
       
-      output += blank_line + output_quote_identifiers(@location) if @location
-      output += output_quote_identifiers(@date)     if @date
+      output += blank_line + output_quote_attributes(@location) if @location
+      output += output_quote_attributes(@date)     if @date
       
       output += blank_line
       output += "\#" * (@length_of_chunk + 5) + "\n"
@@ -33,7 +37,7 @@ module Hedbergism
       "\#" + " " * (@length_of_chunk + 3) + "\#\n"
     end
     
-    def output_quote_identifiers(text)
+    def output_quote_attributes(text)
       "\#" + text.rjust(@length_of_chunk + 2) + " \#\n"
     end
     
