@@ -1,0 +1,24 @@
+.pullquote {
+    width: 50%;
+    /*float: center;*/
+	font-size: 200%;
+    /*margin: 5px;*/
+	/*position: absolute;
+	left: 50%;
+	top: 50%;*/
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    /*text-indent: -1.3em;*/
+}
+ 
+.pullquote:before {
+    content: "“ ";
+    font-size: 350%;
+    font-weight: bold;
+}
+ 
+.pullquote:after {
+    content: " ”";
+    font-size: 350%;
+    font-weight: bold;
+}
