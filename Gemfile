@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'sinatra'
+gem 'sass'
 
 group :development, :test do
   gem "rspec"
@@ -10,4 +11,3 @@ group :development, :test do
   gem "guard-rspec"
   gem "growl"
 end
-# gem "rails"
