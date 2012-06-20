@@ -21,4 +21,6 @@ __END__
             src="/js/ga.js")
     %link(rel="stylesheet" type="text/css" href="/css/styles.css")
   %body
+    #bg
+      %img(src="/images/bg.jpg")
     = yield

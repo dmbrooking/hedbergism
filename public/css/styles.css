@@ -1,24 +1,60 @@
-.pullquote {
-    width: 50%;
-    /*float: center;*/
-	font-size: 200%;
-    /*margin: 5px;*/
-	/*position: absolute;
-	left: 50%;
-	top: 50%;*/
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-    /*text-indent: -1.3em;*/
+#bg {
+	position:fixed; 
+	top:-50%; 
+	left:-50%; 
+	width:200%; 
+	height:200%;
 }
- 
-.pullquote:before {
-    content: "“ ";
-    font-size: 350%;
-    font-weight: bold;
+#bg img {
+	position:absolute; 
+	top:0; 
+	left:0; 
+	right:0; 
+	bottom:0; 
+	margin:auto; 
+	min-width:50%;
+	min-height:50%;
+	z-index: -1;
 }
- 
-.pullquote:after {
-    content: " ”";
-    font-size: 350%;
-    font-weight: bold;
+
+#colly  #left {
+	width: 55%;
+	margin-top: 7%;
 }
+
+#colly #left blockquote {
+	margin: 45px;
+	padding: 0;
+	font-size: 180%;
+	line-height: 160%;
+	font-style: italic;
+	/*color: #484848;
+	color: #686868;*/
+	color: #dddddd;
+}
+
+#colly #left .bqstart {
+	float: left;
+	height: 45px;
+	margin-top: -20px;
+	padding-top: 45px;
+	margin-bottom: -50px;
+	font-size: 700%;
+	/*color: #383838;*/
+	color: #bbbbbb;
+	font-family: 'Lucida Grande', Verdana, helvetica, sans-serif;
+	font-style: normal;
+}
+
+#colly #left .bqend {
+	float: right;
+	height: 25px;
+	margin-top: 0px;
+	padding-top: 55px;
+	font-size: 700%;
+	/*color: #383838;*/
+	color: #bbbbbb;
+	font-family: 'Lucida Grande', Verdana, helvetica, sans-serif;
+	font-style: normal;
+}
+
