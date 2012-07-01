@@ -12,11 +12,16 @@ describe Hedbergism::QuoteFile do
     @quotefile.firstline.should == "I bought a doughnut and they gave me a receipt for the doughnut. I don't need a receipt for the doughnut. I'll just give you the money, and you give me the doughnut, end of transaction. We don't need to bring ink and paper into this. I just can't imagine a scenario where I would have to prove that I bought a doughnut. Some skeptical friend: \"Don't even act like I didn't get that doughnut! I got the documentation right here...oh, wait it's at home...in the file...under \"D\", for \"doughnut.\""
   end
   
-  it "prints a random line" do
-    Hedbergism::QuoteFile.any_instance.stub(:random).and_return(@quote.to_s)
-    
-    @quotefile.random.should == "If I bought a company that made hot dog buns, on Day 1 we would add 2 buns to every package... Day 2, work on deliciousness."
+  it "prints the 10th line" do
+    @quotefile.line(10).should == "Whenever I go to shave, I assume there's someone else on the planet shaving, so I say, \"I'm gonna go shave, too.\""
   end
+  
+  context "Randomness" do
+    it "prints a random line" do
+      Hedbergism::QuoteFile.any_instance.stub(:random).and_return(@quote.to_s)
+    
+      @quotefile.random.should == "If I bought a company that made hot dog buns, on Day 1 we would add 2 buns to every package... Day 2, work on deliciousness."
+    end
   
     it "prints a random banner" do
       Hedbergism::QuoteFile.any_instance.stub(:random).and_return(@quote)
@@ -30,5 +35,13 @@ describe Hedbergism::QuoteFile do
 ################################################################################
 END
     end
-  
+    
+    it "returns valid quote and quote index" do
+      Hedbergism::QuoteFile.any_instance.stub(:random).and_return([@quote.to_s, 10])
+      quote, index = @quotefile.random
+      
+      quote.should == "If I bought a company that made hot dog buns, on Day 1 we would add 2 buns to every package... Day 2, work on deliciousness."
+      index.should == 10
+    end
+  end
 end

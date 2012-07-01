@@ -21,7 +21,14 @@ module Hedbergism
     end
     
     def random
-      @lines.sample
+      #@lines.sample
+      i = rand(@lines.length)
+      puts @i
+      [@lines[i].to_s, i]
+    end
+    
+    def line(line_num)
+        @lines[line_num].to_s
     end
     
   end

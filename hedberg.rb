@@ -1,13 +1,22 @@
 require 'sinatra'
 require_relative 'lib/hedbergism/quote_file'
 
+file_name = File.join(File.dirname(__FILE__), 'bin/quotes.csv')
+quotes = Hedbergism::QuoteFile.new(file_name)
+
 get '/' do
-  #content_type :txt
+ 
+  quote, index = quotes.random
   
-  file_name = File.join(File.dirname(__FILE__), 'bin/quotes.csv')
-  quotes = Hedbergism::QuoteFile.new(file_name).random
+	permalink = "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}/#{index}"
   
-  haml :index, :locals => {:quote => quotes}
+  haml :index, :locals => {:quote => quote, :permalink => permalink}
+end
+
+get '/:id' do |id|
+  quote = quotes.line(id.to_i)
+  
+  haml :index, :locals => {:quote => quote}
 end
 
 __END__
@@ -19,8 +28,9 @@ __END__
     %title Hedbergism - A single, random quote from Mitch Hedberg
     %script(type="text/javascript"
             src="/js/ga.js")
-    %link(rel="stylesheet" type="text/css" href="/css/styles.css")
+    %link(rel="stylesheet" type="text/css" href="/css/styles-nobgimage.css")
   %body
-    #bg
-      %img(src="/images/bg.jpg")
     = yield
+-#   #bg
+-#      %img(src="/images/bg.jpg")
+  

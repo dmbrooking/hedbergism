@@ -1,0 +1,50 @@
+#colly  #left {
+	width: 65%;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#colly #left blockquote {
+	margin: 45px;
+	padding: 0;
+	font-size: 180%;
+	line-height: 160%;
+	font-style: italic;
+	/*color: #484848;
+	color: #686868;*/
+	color: #000000;
+}
+
+#colly #left #quotelinks {
+	text-align: center;
+	margin-top: 5%;
+	font-family: 'Lucida Grande', Verdana, helvetica, sans-serif;
+	font-style: normal;
+}
+
+#colly #left .bqstart {
+	float: left;
+	height: 45px;
+	margin-top: -20px;
+	padding-top: 45px;
+	margin-bottom: -50px;
+	font-size: 700%;
+	/*color: #383838;*/
+	color: #000000;
+	font-family: 'Lucida Grande', Verdana, helvetica, sans-serif;
+	font-style: normal;
+}
+
+#colly #left .bqend {
+	float: right;
+	height: 25px;
+	margin-top: 0px;
+	padding-top: 55px;
+	font-size: 700%;
+	/*color: #383838;*/
+	color: #000000;
+	font-family: 'Lucida Grande', Verdana, helvetica, sans-serif;
+	font-style: normal;
+}
+
