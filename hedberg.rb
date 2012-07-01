@@ -34,6 +34,13 @@ __END__
     %script(type="text/javascript"
             src="/js/ga.js")
     %link(rel="stylesheet" type="text/css" href="/css/styles-nobgimage.css")
+    %meta{:name => "og:title", :content => "Hedbergism - A single, random quote from Mitch Hedberg" } 
+    %meta{:name => "og:type", :content => "website" }
+    %meta{:name => "og:image", :content => "/images/icon.jpeg" }
+    %meta{:name => "og:url", :content => "http://www.hedbergism.com" }
+    %meta{:name => "og:site_name", :content => "Hedbergism" }
+    %meta{:name => "fb:app_id", :content => "407537325948061" }
+    %meta{:name => "og:description", :content => "#{locals[:quote]}" }
   %body
   %div#fb-root
   :javascript
