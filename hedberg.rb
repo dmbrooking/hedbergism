@@ -5,6 +5,7 @@ file_name = File.join(File.dirname(__FILE__), 'bin/quotes.csv')
 quotes = Hedbergism::QuoteFile.new(file_name)
 
 get '/' do
+  #content_type :txt
  
   quote, index = quotes.random
   
@@ -19,6 +20,10 @@ get '/:id' do |id|
   haml :index, :locals => {:quote => quote}
 end
 
+get '/channel.html' do
+  File.read(File.join('public', 'channel.html'))
+end
+
 __END__
 @@layout
 !!! 5
@@ -30,6 +35,27 @@ __END__
             src="/js/ga.js")
     %link(rel="stylesheet" type="text/css" href="/css/styles-nobgimage.css")
   %body
+  %div#fb-root
+  :javascript
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : 'hedbergism', // App ID
+        channelUrl : '//www.hedbergism.com/channel.html', // Channel File
+        status     : true, // check login status
+        cookie     : true, // enable cookies to allow the server to access the session
+        xfbml      : true  // parse XFBML
+      });
+      // Additional initialization code here
+    };
+
+    // Load the SDK Asynchronously
+    (function(d){
+      var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement('script'); js.id = id; js.async = true;
+      js.src = "//connect.facebook.net/en_US/all.js";
+      ref.parentNode.insertBefore(js, ref);
+      }(document));
     = yield
 -#   #bg
 -#      %img(src="/images/bg.jpg")
