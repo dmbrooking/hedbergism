@@ -17,12 +17,12 @@
 	z-index: -1;
 }
 
-#colly  #left {
+#colly  #quote {
 	width: 55%;
 	margin-top: 7%;
 }
 
-#colly #left blockquote {
+#colly #quote blockquote {
 	margin: 45px;
 	padding: 0;
 	font-size: 180%;
@@ -33,7 +33,7 @@
 	color: #dddddd;
 }
 
-#colly #left .bqstart {
+#colly #quote .bqstart {
 	float: left;
 	height: 45px;
 	margin-top: -20px;
@@ -46,7 +46,7 @@
 	font-style: normal;
 }
 
-#colly #left .bqend {
+#colly #quote .bqend {
 	float: right;
 	height: 25px;
 	margin-top: 0px;

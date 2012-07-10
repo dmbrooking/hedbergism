@@ -3,6 +3,7 @@ require_relative 'lib/hedbergism/quote_file'
 
 file_name = File.join(File.dirname(__FILE__), 'bin/quotes.csv')
 quotes = Hedbergism::QuoteFile.new(file_name)
+title = "Hedbergism - A single, random quote from Mitch Hedberg"
 
 get '/' do
   #content_type :txt
@@ -11,13 +12,13 @@ get '/' do
   
 	permalink = "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}/#{index}"
   
-  haml :index, :locals => {:quote => quote, :permalink => permalink}
+  haml :index, :locals => {:quote => quote, :permalink => permalink, :title => title}
 end
 
 get '/:id' do |id|
   quote = quotes.line(id.to_i)
   
-  haml :index, :locals => {:quote => quote}
+  haml :index, :locals => {:quote => quote, :permalink => permalink, :title => title}
 end
 
 get '/channel.html' do
@@ -30,11 +31,11 @@ __END__
 %html
   %head
     %meta(charset="utf-8")
-    %title Hedbergism - A single, random quote from Mitch Hedberg
+    %title #{locals[:title]}
     %script(type="text/javascript"
             src="/js/ga.js")
     %link(rel="stylesheet" type="text/css" href="/css/styles-nobgimage.css")
-    %meta{:name => "og:title", :content => "Hedbergism - A single, random quote from Mitch Hedberg" } 
+    %meta{:name => "og:title", :content => "#{locals[:title]}" } 
     %meta{:name => "og:type", :content => "website" }
     %meta{:name => "og:image", :content => "/images/icon.jpeg" }
     %meta{:name => "og:url", :content => "http://www.hedbergism.com" }

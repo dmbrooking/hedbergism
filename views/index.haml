@@ -1,10 +1,9 @@
-%div#colly
-	%div#left
+%div#hedberg
+	%div#quote
 		%blockquote<
 			%span(class="bqstart") &#8220;
 			#{locals[:quote]}
 			
 			%span(class="bqend") &#8221;
-		%div#quotelinks
-			%a{:href => "#{locals[:permalink]}", :title => 'Permalink'} Permalink
-			.fb-like{"data-action" => "like", "data-href" => "http://www.hedbergism.com", "data-colorscheme" => "light", "data-send" => "true", "data-show-faces" => "false", "data-font" => "lucida grande", "data-width" => 200, "data-title" => "Testing"}
+	%div#quotelinks
+		.fb-like{"data-action" => "like", "data-href" => "http://www.hedbergism.com", "data-colorscheme" => "light", "data-send" => "true", "data-show-faces" => "false", "data-font" => "lucida grande", "data-width" => 340, "data-title" => "Testing"}

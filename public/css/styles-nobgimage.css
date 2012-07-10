@@ -1,11 +1,11 @@
-#colly  #left {
+#hedberg  #quote {
 	width: 65%;
 	margin-top: 10%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#colly #left blockquote {
+#hedberg #quote blockquote {
 	margin: 45px;
 	padding: 0;
 	font-size: 180%;
@@ -16,14 +16,14 @@
 	color: #000000;
 }
 
-#colly #left #quotelinks {
+#hedberg #quotelinks {
 	text-align: center;
 	margin-top: 5%;
 	font-family: 'Lucida Grande', Verdana, helvetica, sans-serif;
 	font-style: normal;
 }
 
-#colly #left .bqstart {
+#hedberg #quote .bqstart {
 	float: left;
 	height: 45px;
 	margin-top: -20px;
@@ -36,7 +36,7 @@
 	font-style: normal;
 }
 
-#colly #left .bqend {
+#hedberg #quote .bqend {
 	float: right;
 	height: 25px;
 	margin-top: 0px;
