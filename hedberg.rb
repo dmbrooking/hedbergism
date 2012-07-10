@@ -35,12 +35,12 @@ __END__
     %script(type="text/javascript"
             src="/js/ga.js")
     %link(rel="stylesheet" type="text/css" href="/css/styles-nobgimage.css")
-    %meta{:name => "og:title", :content => "#{locals[:title]}" } 
-    %meta{:name => "og:type", :content => "website" }
-    %meta{:name => "og:image", :content => "/images/icon.jpeg" }
-    %meta{:name => "og:url", :content => "http://www.hedbergism.com" }
-    %meta{:name => "og:site_name", :content => "Hedbergism" }
-    %meta{:name => "fb:app_id", :content => "407537325948061" }
+    %meta{:property => "og:title", :content => "#{locals[:title]}" } 
+    %meta{:property => "og:type", :content => "website" }
+    %meta{:property => "og:image", :content => "/images/icon.jpeg" }
+    %meta{:property => "og:url", :content => "http://www.hedbergism.com" }
+    %meta{:property => "og:site_name", :content => "Hedbergism" }
+    %meta{:property => "fb:app_id", :content => "407537325948061" }
     %meta{:property => "og:description", :content => "#{locals[:quote]}" }
   %body
   %div#fb-root
