@@ -41,7 +41,7 @@ __END__
     %meta{:name => "og:url", :content => "http://www.hedbergism.com" }
     %meta{:name => "og:site_name", :content => "Hedbergism" }
     %meta{:name => "fb:app_id", :content => "407537325948061" }
-    %meta{:name => "og:description", :content => "#{locals[:quote]}" }
+    %meta{:property => "og:description", :content => "#{locals[:quote]}" }
   %body
   %div#fb-root
   :javascript
